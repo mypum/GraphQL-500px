@@ -4,6 +4,9 @@ import {
   GraphQLInt
 } from 'graphql'
 
+import ImageUrlType from '../imageurl/schema'
+import UserType from '../user/schema'
+
 const PhotoType = new GraphQLObjectType({
   name: 'Photo',
   fields: {
@@ -30,8 +33,8 @@ const PhotoType = new GraphQLObjectType({
     height: { type: GraphQLInt },
     rating: { type: GraphQLString },
     imageUrl: {
-      type: GraphQLString,
-      resolve: (photo) => photo.image_url
+      type: ImageUrlType,
+      resolve: (photo) => photo.images
     },
     votesCount: {
       type: GraphQLString,
@@ -40,6 +43,10 @@ const PhotoType = new GraphQLObjectType({
     createdAt: {
       type: GraphQLString,
       resolve: (photo) => photo.created_at
+    },
+    user: {
+      type: UserType,
+      resolve: (photo) => photo.user
     }
   }
 })
