@@ -4,8 +4,8 @@ import {
   GraphQLInt
 } from 'graphql'
 
-const PictureType = new GraphQLObjectType({
-  name: 'Picture',
+const PhotoType = new GraphQLObjectType({
+  name: 'Photo',
   fields: {
     id: { type: GraphQLInt },
     name: { type: GraphQLString },
@@ -44,4 +44,4 @@ const PictureType = new GraphQLObjectType({
   }
 })
 
-export default PictureType
+export default PhotoType

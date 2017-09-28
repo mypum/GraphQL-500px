@@ -2,11 +2,11 @@ import {
   GraphQLInt
 } from 'graphql'
 
-import PictureType from './schema'
+import PhotoType from './schema'
 import resolver from './resolver'
 
 export default {
-  type: PictureType,
+  type: PhotoType,
   args: {
     id: {
       type: GraphQLInt

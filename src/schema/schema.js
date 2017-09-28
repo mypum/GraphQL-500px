@@ -3,12 +3,14 @@ import {
   GraphQLSchema
 } from 'graphql'
 
-import picture from '../modules/picture'
+import photo from '../modules/photo'
+import photos from '../modules/photos'
 
 const RootQuery = new GraphQLObjectType({
   name: 'Query',
   fields: {
-    picture
+    photo,
+    photos
   }
 })
 
