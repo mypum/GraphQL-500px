@@ -4,7 +4,7 @@ import schema from '../schema/schema'
 
 const app = express()
 
-app.use('/explore', expressGraphQL({
+app.use('/explorer', expressGraphQL({
   schema,
   graphiql: true
 }))
