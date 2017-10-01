@@ -12,6 +12,8 @@ const UserType = new GraphQLObjectType({
     firstname: { type: GraphQLString },
     lastname: { type: GraphQLString },
     fullname: { type: GraphQLString },
+    city: { type: GraphQLString },
+    country: { type: GraphQLString },
     userPicUrl: {
       type: GraphQLString,
       resolve: (user) => user.userpic_url

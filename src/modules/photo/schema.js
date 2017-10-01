@@ -32,6 +32,7 @@ const PhotoType = new GraphQLObjectType({
     width: { type: GraphQLInt },
     height: { type: GraphQLInt },
     rating: { type: GraphQLString },
+    category: { type: GraphQLInt },
     imageUrl: {
       type: ImageUrlType,
       resolve: (photo) => photo.images
@@ -43,6 +44,10 @@ const PhotoType = new GraphQLObjectType({
     createdAt: {
       type: GraphQLString,
       resolve: (photo) => photo.created_at
+    },
+    takenAt: {
+      type: GraphQLString,
+      resolve: (photo) => photo.taken_at
     },
     user: {
       type: UserType,

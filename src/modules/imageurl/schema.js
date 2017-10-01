@@ -10,11 +10,11 @@ const ImageUrlType = new GraphQLObjectType({
   fields: {
     small: {
       type: GraphQLString,
-      resolve: (item) => get(find(item, { size: 21 }), 'url')
+      resolve: (item) => get(find(item, { size: 440 }), 'url')
     },
     medium: {
       type: GraphQLString,
-      resolve: (item) => get(find(item, { size: 440 }), 'url')
+      resolve: (item) => get(find(item, { size: 21 }), 'url')
     },
     full: {
       type: GraphQLString,
