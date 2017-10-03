@@ -1,5 +1,6 @@
 import {
-  GraphQLInt
+  GraphQLInt,
+  GraphQLString
 } from 'graphql'
 
 import PhotoType from './schema'
@@ -10,6 +11,9 @@ export default {
   args: {
     id: {
       type: GraphQLInt
+    },
+    category: {
+      type: GraphQLString
     }
   },
   resolve: resolver
