@@ -1,6 +1,7 @@
 import {
   GraphQLInt,
-  GraphQLList
+  GraphQLList,
+  GraphQLString
 } from 'graphql'
 
 import Photo from '../photo/schema'
@@ -11,6 +12,9 @@ export default {
   args: {
     limit: {
       type: GraphQLInt
+    },
+    category: {
+      type: GraphQLString
     }
   },
   resolve: resolver
